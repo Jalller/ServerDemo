@@ -12,7 +12,9 @@
     <title>Brugerside</title>
 </head>
 <body>
-Velkommen, du er nu logget ind som ${sessionScope.fnavn}
+Velkommen, du er nu logget ind som ${sessionScope.fname}
+Velkommen, du er nu logget ind som ${applicationScope.fnavn}
+
 <%--med sessionId ${requestScope.session.id}--%>
 
 
@@ -29,7 +31,7 @@ Velkommen, du er nu logget ind som ${sessionScope.fnavn}
 <%--&lt;%&ndash;        <input type="submit" value="Tilføj">&ndash;%&gt;--%>
 <%--    </select>--%>
 <%--</form>--%>
-
+<div class="form">
 <form action="TilfjemneServlet",method = "get">
     <label for="bund">Bund:</label><br>
     <input type="text" id="bund" name="bund" value=""><br>
@@ -41,7 +43,7 @@ Velkommen, du er nu logget ind som ${sessionScope.fnavn}
     <label for="antal">Antal:</label><br>
     <input type="text" id="antal" name="antal" value=""><br>
     <input type="submit" value="Submit">
-</form>
+</form></div>
 
 <form action="VisOversigtServlet",method = "get">
     <input id="knap" type="submit" value="knap" button style="background-color:red;border-color: yellow">

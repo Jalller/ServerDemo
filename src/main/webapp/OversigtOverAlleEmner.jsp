@@ -12,7 +12,9 @@
     <title>Title</title>
 </head>
 <body>
-Her kan du få oversigten over din kurv
+<h2 style="background-color:DodgerBlue;">
+Her kan du se oversigten over din kurv
+</h2>
 <br>
 <div class="-summary">
 <c:forEach items="${applicationScope.kurv}" var="bund">

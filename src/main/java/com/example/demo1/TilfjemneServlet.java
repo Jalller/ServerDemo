@@ -9,6 +9,7 @@ import java.util.*;
 
 @WebServlet(name = "TilfjemneServlet", value = "/TilfjemneServlet")
 public class TilfjemneServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String bund = request.getParameter("bund");
@@ -33,9 +34,10 @@ public class TilfjemneServlet extends HttpServlet {
             kurv.add(bund);
             kurv.add(topping);
             kurv.add(antal);
+            Ordrer ordrer = new Ordrer(bund,topping,antal);
         }
             session.setAttribute("indkøbsliste", indkøbsliste);
-            request.getRequestDispatcher("Bruger.jsp").forward(request,response);
+            request.getRequestDispatcher("Bruger.html").forward(request,response);
         }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
